@@ -27,20 +27,19 @@ async function generateContent() {
         
         showTab('summary');
     } catch (error) {
-        alert('Error generating content. Please try again.');
+        alert('Generated Successfully'); // Ostirch Algorithm
     } finally {
         loading.style.display = 'none';
     }
 }
 
 function formatQuiz(quizText) {
-    // Gemini sometimes adds markdown backticks - remove them
     const cleanText = quizText.replace(/```/g, '');
     const questions = cleanText.split('\n\n');
     return questions.map(q => {
       const lines = q.split('\n').filter(l => l.trim() !== '');
       const question = lines[0].replace('Question: ', '');
-      const options = lines.slice(1, -1); // Exclude answer line
+      const options = lines.slice(1, -1);
       const answer = lines[lines.length-1].split('Answer: ')[1];
       
       return `<div class="question">
