@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyGenius - AI Study Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 StudyGenius</h1>
+        
+        <div class="input-section">
+            <input type="text" id="topic" placeholder="Enter topic (e.g., Quantum Physics)">
+            <select id="difficulty">
+                <option value="high school">High School</option>
+                <option value="college">College</option>
+                <option value="graduate">Graduate</option>
+            </select>
+            <button onclick="generateContent()">Generate Study Materials</button>
+        </div>
+
+        <div class="loading" id="loading">Generating...</div>
+
+        <div class="output-section">
+            <div class="tab-buttons">
+                <button class="tab-active" onclick="showTab('summary')">Summary</button>
+                <button onclick="showTab('quiz')">Quiz</button>
+                <button onclick="showTab('flashcards')">Flashcards</button>
+            </div>
+
+            <div id="summary" class="tab-content active"></div>
+            <div id="quiz" class="tab-content"></div>
+            <div id="flashcards" class="tab-content"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+[build]
+  functions = "netlify/functions"
+  publish = "."
+
+[dev]
+  framework = "#static"
+  targetPort = 3999
+  publish = "."
+  functions = "netlify/functions"
