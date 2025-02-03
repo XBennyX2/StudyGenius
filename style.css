@@ -68,6 +68,48 @@ button:hover {
     display: block;
 }
 
+/* Quiz Styles */
+.question {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.options {
+    margin: 10px 0;
+}
+
+.option {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.option:hover {
+    background: #f5f5f5;
+}
+
+.option.correct {
+    background: #e6ffe6;
+    border-color: #4CAF50;
+}
+
+.option.wrong {
+    background: #ffe6e6;
+    border-color: #ff5252;
+}
+
+.feedback {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Flashcards */
 .flashcard {
     padding: 15px;
     margin: 10px 0;
@@ -75,3 +117,9 @@ button:hover {
     border-radius: 8px;
     border: 1px solid #eee;
 }
+.question.error {
+    background: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+    padding: 15px;
+  }
